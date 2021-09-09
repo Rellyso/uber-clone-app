@@ -44,11 +44,6 @@ const Map = () => {
 
           strokeWidth={3}
           lineDashPattern={[100000, 0]}
-          lineCap={"round"}
-          lineJoin={10}
-          style={{
-
-          }}
         />
       )}
 
