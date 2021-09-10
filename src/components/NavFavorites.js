@@ -8,13 +8,13 @@ const data = [
   {
     id: '123',
     icon: 'home',
-    location: 'Home',
+    location: 'Casa',
     destination: 'Rua Trajano Filgueira n° 1, Mossoró, Rio Grande do Norte'
   },
   {
     id: '456',
     icon: 'briefcase',
-    location: 'Work',
+    location: 'Trabalho',
     destination: 'Centro, Mossoró, Rio Grande do Norte'
   }
 ]

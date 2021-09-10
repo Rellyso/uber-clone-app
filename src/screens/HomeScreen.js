@@ -19,14 +19,14 @@ const HomeScreen = () => {
             width: 100, height: 100, resizeMode: "contain"
           }}
           source={{
-            uri: "https://links.papareact.com/gzs"
+            uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
           }}
         />
 
 
         <View>
           <GooglePlacesAutocomplete
-            placeholder="Where from?"
+            placeholder="De onde?"
 
             styles={{
               container: {

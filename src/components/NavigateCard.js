@@ -20,13 +20,13 @@ export const NavigateCard = () => {
       <Text
         style={tw`text-center py-5 text-xl`}
       >
-        Good morning, Someone
+        Bom dia, Rellyson
       </Text>
 
       <View style={tw`border-t border-gray-200 flex-shrink`}>
         <View style={tw`px-5`}>
           <GooglePlacesAutocomplete
-            placeholder="Where to?"
+            placeholder="para onde?"
             styles={toInputBoxStyles}
 
             returnKeyType={"search"}
@@ -69,10 +69,10 @@ export const NavigateCard = () => {
       >
         <TouchableOpacity
           onPress={() => navigation.navigate('RideOptionsCard')}
-          style={tw`flex flex-row bg-black w-24 px-4 py-3 rounded-full justify-between`}
+          style={tw`flex flex-row bg-black w-28 px-4 py-3 rounded-full justify-between`}
         >
           <Icon size={16} name="car" type="font-awesome" color="white" />
-          <Text style={tw`text-white text-center`}>Rides</Text>
+          <Text style={tw`text-white text-center`}>Corrida</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
