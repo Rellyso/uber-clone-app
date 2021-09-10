@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, SafeAreaView, View, StyleSheet } from 'react-native'
+import { Text, SafeAreaView, View, StyleSheet, TouchableOpacity } from 'react-native'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
 import tw from 'tailwind-react-native-classnames'
 import { GOOGLE_MAPS_API_KEY } from '@env'
@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux'
 import { useNavigation } from '@react-navigation/native'
 import { setDestination } from '../slices/navSlice'
 import { NavFavorites } from './NavFavorites'
+import { Icon } from 'react-native-elements'
 
 export const NavigateCard = () => {
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ export const NavigateCard = () => {
                   description: data.description,
                 }));
 
-              navigation.navigate('RideOptions')
+              navigation.navigate('RideOptionsCard')
             }}
 
             query={{
@@ -52,9 +53,36 @@ export const NavigateCard = () => {
             }}
           />
         </View>
+
+        <NavFavorites />
+      </View>
+      <View
+        style={tw`
+          flex-row
+          bg-white
+          justify-evenly
+          py-2
+          mt-auto
+          border-gray-100
+          border-t`
+        }
+      >
+        <TouchableOpacity
+          onPress={() => navigation.navigate('RideOptionsCard')}
+          style={tw`flex flex-row bg-black w-24 px-4 py-3 rounded-full justify-between`}
+        >
+          <Icon size={16} name="car" type="font-awesome" color="white" />
+          <Text style={tw`text-white text-center`}>Rides</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={tw`flex flex-row bg-white w-24 px-4 py-3 rounded-full justify-between`}
+        >
+          <Icon size={16} name="fast-food-outline" type="ionicon" color="black" />
+          <Text style={tw`text-black text-center`}>Eats</Text>
+        </TouchableOpacity>
       </View>
 
-      <NavFavorites />
     </SafeAreaView>
   )
 }
